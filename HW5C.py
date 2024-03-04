@@ -45,7 +45,7 @@ def main():
     ic = [0, 0, pa, pa]
 
     # Call solve_ivp with ode_system as a callback
-    sln = solve_ivp(ode_system, (t[0], t[-1]), ic, args=(myargs,), t_eval=t)
+    sln = solve_ivp(ode_system, (t[0], t[-1]), ic, args=myargs, t_eval=t)
 
     # Unpack result into meaningful names
     xvals = sln.y[0]
